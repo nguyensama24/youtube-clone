@@ -6,17 +6,15 @@ import { useParams } from 'react-router-dom'
 import { ChannelsCommentCard } from './'
 const VideoCmt = () => {
     const [comments, setComments] = useState([])
-    // const [comment, setComment] = useState(null)
-    // const [authorChannelId, setAuthorChannelId] = useState([])
+
     const { id } = useParams();
-    // console.log(comments);
+
     useEffect(() => {
 
         fetchFromAPI(`commentThreads?part=snippet&videoId=${id}&maxResults=50`)
             .then((data) => setComments(data?.items))
 
-        // fetchFromAPI(`comments?part=snippet&id=UgwFtTIpoLvNaz3bcvF4AaABAg`)
-        //     .then((data) => setComment(data.items))
+
     }, [])
 
 
@@ -29,7 +27,7 @@ const VideoCmt = () => {
                 </Box>
             ))}
         </Stack>
-        // <></>
+
     )
 }
 
