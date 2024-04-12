@@ -19,7 +19,7 @@ const ChannelsCommentCard = ({ commentsDetail }) => {
                 <CardMedia
                     image={commentsDetail?.snippet?.topLevelComment?.snippet?.authorProfileImageUrl || demoProfilePicture}
                     alt={commentsDetail?.snippet?.topLevelComment?.snippet?.authorDisplayName}
-                    sx={{ borderRadius: '50%', height: '45px', width: '45px', border: '1px solid #e3e3e3' }}
+                    sx={{ borderRadius: '50%', height: { xs: '45px', md: '50px' }, width: { xs: '55px', md: '50px' }, border: '1px solid #e3e3e3' }}
                 />
                 <Box sx={{ display: 'flex', flexDirection: 'column', color: '#fff', width: { xs: '100%', md: '100%' }, }}>
                     <Typography variant={{ sm: "subtitle1", md: 'h6' }} color="#fff"  >

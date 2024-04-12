@@ -35,13 +35,13 @@ const VideoDetail = () => {
                         <Typography color="#fff" variant="h5" fontWeight="bold" p={2}>
                             {title}
                         </Typography>
-                        <Stack direction="row" justifyContent="space-between" sx={{ color: "#fff" }} py={1} px={2} >
+                        <Stack direction="row" justifyContent="space-between" sx={{ color: "#fff" }} py={{ md: 1 }} px={{ md: 1 }} >
                             <Link to={`/channel/${channelId}`}>
-                                <CardContent sx={{ display: 'flex', flexDirection: 'row', color: '#fff', gap: "15px" }}  >
+                                <CardContent sx={{ display: 'flex', flexDirection: 'row', color: '#fff', gap: { md: "10px", xs: '5px' } }}  >
                                     <CardMedia
                                         image={url || demoProfilePicture}
                                         alt={channelTitle}
-                                        sx={{ borderRadius: '50%', height: '45px', width: '45px', border: '1px solid #e3e3e3' }}
+                                        sx={{ borderRadius: '50%', height: { xs: '30px', md: '50px' }, width: { xs: '30px', md: '50px' }, border: '1px solid #e3e3e3' }}
                                     />
                                     <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }} >
                                         <Typography variant={{ sm: "subtitle1", md: 'h6' }} color="#fff">
@@ -53,17 +53,17 @@ const VideoDetail = () => {
                                 </CardContent>
                             </Link>
                             <Stack direction="row" gap="20px" alignItems="center">
-                                <Typography variant="body1" sx={{ opacity: 0.7 }}>
+                                <Typography variant="subtitle2" sx={{ opacity: 0.7 }}>
                                     {parseInt(viewCount).toLocaleString()} views
                                 </Typography>
-                                <Typography variant="body1" sx={{ opacity: 0.7 }}>
+                                <Typography variant="subtitle2" sx={{ opacity: 0.7 }}>
                                     {parseInt(likeCount).toLocaleString()} likes
                                 </Typography>
                             </Stack>
 
                         </Stack>
-                        <Stack sx={{ backgroundColor: "#1E1E1E", borderRadius: '10px' }}>
-                            <Typography color="#fff" variant="h9" p={4}>
+                        <Stack sx={{ backgroundColor: "#1E1E1E", borderRadius: '10px', margin: "10px" }}>
+                            <Typography color="#fff" variant="h9" p={4} >
                                 {description}
                             </Typography>
                         </Stack>
